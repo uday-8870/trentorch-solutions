@@ -5,3 +5,4 @@ def label_smoothing(logits, y, eps):
     q[y] += 1 - eps
     z = logits - logits.max()
     return q, float(-(q * (z - np.log(np.exp(z).sum()))).sum())
+    pass
